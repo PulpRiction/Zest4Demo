@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Zest 4's 8x8 Demo</title>  <!-- Web Page Tab Name. -->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<style>
+        body {
+            background-color: #FFFFFF;
+            color: white; /* Ensures text is readable */
+        }
+    	</style>
+	</head>
+
+
+    <nav>
+      <ul id="navbar" style="list-style: none; text-align: right;">
+        <li><div id="__8x8-chat-button-container-script_3253393646628f7ebcb9cc8.09307088"></div></li> <!-- chat button id. -->
+	<li style="float:left"><a href="https://githubmatthewmarchantcouk.github.io/Zest-4-Demo/co-browse/"><img src="toplhlogo.png"></a></li> <!-- the top left hand logo and makes the logo a button to go to the cobrowse page. -->
+			
+      </ul>
+    </nav>
+  
+
+<body>
+
+    <!-- This script will not interfere with the button layout, you just need to include it in the same page. It must also be within the <body> section of the page, preferably just before the ending tag. -->
+    <script type="text/javascript">
+    (function(c, f, ef){
+        var typeofC = Object.prototype.toString.call(c);
+        var props = (typeofC === '[object Object]' && c) || {};
+        var cb = f || (typeofC === '[object Function]' && c);
+        var config = {
+            scriptUuid: "script_3253393646628f7ebcb9cc8.09307088",
+            tenant: "emVzdDR4MDE",
+            channelName: "Chat",
+            channelUuid: "KaH4RUi3RQCEABsoMEj2Ag",
+            domain: "https://vcc-eu10.8x8.com",
+            buttonContainerId: "__8x8-chat-button-container-script_3253393646628f7ebcb9cc8.09307088",
+            align: "right",
+        };
+
+        var url = new URL("https://cloud8-cc-geo.8x8.com/vcc-chat-channels/public/webchat/discovery");
+        var params = { domain: config.domain, tenant: config.tenant, channelUuid: config.channelUuid };
+        url.search = new URLSearchParams(params).toString();
+        fetch(url)
+            .then(response => response.json())
+            .then(data => config.domain = !data.domain ? config.domain : data.domain)
+            .catch(error => console.warn('Failed to retrieve override domain, will continue using ', config.domain, error))
+            .finally(() => loadChat());
+
+        function loadChat() {
+            var se = document.createElement("script");
+            se.type = "text/javascript";
+            se.async = true;
+            se.src = props.loaderURL || (config.domain + "/CHAT/common/js/chatv3.js");
+            Object.keys(config).forEach(function (k) { se.dataset[k] = config[k] });
+            Object.keys(props).forEach(function (k) { se.dataset[k] = props[k] });
+            function handleInitEvent(e) {
+                var initFn = e.detail.init;
+                initFn(config, cb);
+                se.removeEventListener('init', handleInitEvent)
+            }
+            function handleErrorEvent(e) {
+                ef && ef(e);
+                se.removeEventListener('customerror', handleErrorEvent);
+            }
+            se.addEventListener('init', handleInitEvent);
+            se.addEventListener('customerror', handleErrorEvent);
+            var os = document.getElementsByTagName("script")[0];
+            os.parentNode.insertBefore(se, os);
+        }
+    })();
+    </script>
+	
+<script>
+window.CoBrowsingCustomStrings = {
+  "popup-title": "Zest4's Co-browsing", <!-- CoBrowse name. -->
+  "popup-close": "X",
+  "popup-start-information": "Please Click Start to initialize the Co-browsing session and pass the session ID below to the Agent.",
+  "popup-sync-information": "You may have open another page that is currently being synchronized. Click Synchronize to synchronize this page instead.",
+  "popup-session-id-label": "Session ID: ",
+  "popup-start-button": "Start",
+  "popup-stop-button": "Stop",
+  "popup-sync-button": "Synchronize",
+  "popup-status-label": "Status: ",
+
+  "status-connecting": "Connecting...",
+  "status-ready": "Connected",
+  "status-connected": "Connected",
+  "status-replica-disconnected": "Waiting for agent to connect.",
+  "status-disconnected": "Disconnected",
+  "status-sync-required": "Synchronization required",
+  "status-invalid-license": "Invalid license",
+  "status-limited-license": "All agents are busy, please try again later",
+  "status-invalid-domain-for-license": "Invalid domain for license",
+  "status-disabled-license": "Disabled license"
+};
+</script>
+<script> 
+(function(e,i,g,h,t,c,o,b){o=i.createElement(g);o.async=1;o.src=t;o.setAttribute(h,c); 
+b=i.getElementsByTagName(g)[0];b.parentNode.insertBefore(o,b); 
+})(window,document,'script','data-8x8-co-browsing','https://cb.8x8.com/license{67d9cdab4333f7004d23c32f}/dist/primary-bundle.js','67ec4a6512eb3d004d7ac8fd','data-8x8-co-browsing-mode','full-control'); 
+</script> 	
+
+</body>
+ 
+    
+<div id="welcome-section" >
+      
+<img src="Pic2.PNG"> <!-- Top Picture. -->
+
+    <h1></h1>
+    <p></p>
+  </div>
+
+<div id="welcome-section2" >
+      
+<img src="Pic3.PNG"> <!-- Bottom Picture. -->
+
+    <h1></h1>
+    <p></p>
+  </div>
+	
+
+	
+<!-- for pop up button -->
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  color: #3a3a38;
+}
+* {
+  box-sizing: border-box;
+  color: #3a3a38;
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 245px;
+  border-radius: 10px; /* Rounded edges */
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  background-color: white;
+  color: #3a3a38;
+  border-radius: 15px; /* Rounded edges for popup */
+  padding: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for effect */
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+  color: #3a3a38;
+  border-radius: 10px; /* Rounded edges for form container */
+}
+
+/* Full-width input fields */
+.form-container input[type=text], 
+.form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  color: #3a3a38;
+  border-radius: 8px; /* Rounded input fields */
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, 
+.form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+  color: #3a3a38;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  border-radius: 8px; /* Rounded buttons */
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: #90bcb4;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+/* Table text color */
+table, td, th {
+  color: #3a3a38;
+}
+</style>
+</head>
+
+	
+	
+<body>
+
+<button class="open-button" onclick="openForm()">Request a Callback</button>
+
+<div class="form-popup" id="myForm">
+  <form name="WebCallBack" action="https://vcc-eu10.8x8.com/SC/webcallback.php" method="get"  
+        oninput="extTransactionData.value = '[Name|' + fname.value +' '+ lname.value + '][Location|' + location.value + '][Reason|' + reason.value +']'">
+    <input type="hidden" name="extTransactionData"/>
+    <input type="hidden" name="tenant" value="zest4x01"/>  <!-- Tenant Name. -->
+    <input type="hidden" name="token" value="6c593095111b09d2ecf1510d32ebf9bddfd48c77be1afb85ce6dc8313719ba1c"/>  <!-- Action Tokes. -->
+    <input type="hidden" name="channel_number" value="441604263652"/> <!-- Channel Number. -->
+    <input type="hidden" name="callback_type" value="1"/>
+    <input type="hidden" name="queue_id" value="121"/> <!-- Queue ID. -->
+    <input type="hidden" name="expiration" value="1200"/><br/>
+    <table style="background-color:#FFFFFF;">
+      <tr><td>First name:</td><td> <input type="text" name="fname"/></td></tr>
+      <tr><td>Last name:</td><td><input type="text" name="lname" /></td></tr>
+      <tr><td>Location:</td><td><input type="text" name="location" /></td></tr>
+      <tr><td>Reason:</td><td>
+        <select name="reason" style="border-radius: 8px; padding: 5px;">
+          <option value="Sales Training">Sales Training</option>
+          <option value="Technical Training">Technical Training</option>
+          <option value="Information" selected>Information</option>
+          <option value="Other">Other</option>
+        </select>
+      </td></tr>
+      <tr><td>Phone:</td><td><input type="tel" name="phone" class="anotherClass maskContent" /></td></tr>
+      <tr><td colspan="2" style="text-align:center"><input type="submit" value="Call Me" style="border-radius: 8px;"/></td></tr>
+    </table>
+  </form>
+
+  <form action="/action_page.php" class="form-container">
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+	
+</html>

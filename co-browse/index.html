@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zest 4's Co Browse Demo</title>
+    <style>
+        body {
+            background-color: #FFFFFF;
+            text-align: center;
+            color: white;
+        }
+        img {
+            margin-top: 0;
+            max-width: 100%;
+             height: auto;
+        }
+    </style>
+</head>
+<nav>
+      <ul id="navbar" style="list-style: none; text-align: center;">
+        <li style="display: inline-block; margin: 0 10px;"><a href="#" onclick="window.coBrowsingInstance && coBrowsingInstance.showPopup();return false;"><img src="co-browse - transparent.gif"> </a></li>
+      </ul>
+    </nav>
+
+<body>
+    <img src="pic4.PNG" alt="Displayed Image">
+
+<script>
+window.CoBrowsingCustomStrings = {
+  "popup-title": "Zest 4's Co-browsing",
+  "popup-close": "X",
+  "popup-start-information": "Please Click Start to initialize the Co-browsing session and pass the session ID below to the Agent.",
+  "popup-sync-information": "You may have open another page that is currently being synchronized. Click Synchronize to synchronize this page instead.",
+  "popup-session-id-label": "Session ID: ",
+  "popup-start-button": "Start",
+  "popup-stop-button": "Stop",
+  "popup-sync-button": "Synchronize",
+  "popup-status-label": "Status: ",
+
+  "status-connecting": "Connecting...",
+  "status-ready": "Connected",
+  "status-connected": "Connected",
+  "status-replica-disconnected": "Waiting for agent to connect.",
+  "status-disconnected": "Disconnected",
+  "status-sync-required": "Synchronization required",
+  "status-invalid-license": "Invalid license",
+  "status-limited-license": "All agents are busy, please try again later",
+  "status-invalid-domain-for-license": "Invalid domain for license",
+  "status-disabled-license": "Disabled license"
+};
+</script>
+	
+<script>
+
+(function(e,i,g,h,t,c,o,b,r,w){r=i.createElement(g);r.setAttribute(h,c);
+
+o&&Object.keys(o).map(function(k){r.setAttribute(k,o[k])});
+
+r.async=1;r.src='https://'+t+'/license'+c+'/dist/primary-bundle.js';
+
+w=i.getElementsByTagName(g)[0];w.parentNode.insertBefore(r,w);
+
+})(window,document,'script','data-8x8-co-browsing','cb.8x8.com','67ec4a6512eb3d004d7ac8fd',{
+
+'data-8x8-co-browsing-multi-domain': true,
+
+'data-8x8-co-browsing-mode':'<Co-browse-mode>'
+
+});
+	
+</script>
+
+    
+</body>
+</html>
