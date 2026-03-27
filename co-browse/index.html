@@ -1,32 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Totally247 Co Browse</title>
+    <title>Zest 4's Co Browse Demo</title>
     <style>
         body {
             background-color: #FFFFFF;
             text-align: center;
             color: white;
+            margin: 0;
         }
         img {
             margin-top: 0;
             max-width: 100%;
-             height: auto;
+            height: auto;
+            display: block;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        #navbar {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            text-align: center;
+        }
+        #navbar .co-browse-item {
+            display: inline-block;
         }
     </style>
 </head>
-<nav>
-      <ul id="navbar" style="list-style: none; text-align: center;">
-        <li style="display: inline-block; margin: 0 10px;"><a href="#" onclick="window.coBrowsingInstance && coBrowsingInstance.showPopup();return false;"><img src="co-browse - transparent.gif"> </a></li>
+
+<body>
+    <nav>
+      <ul id="navbar">
+        <li class="co-browse-item"><a href="#" onclick="window.coBrowsingInstance && coBrowsingInstance.showPopup();return false;"><img src="co-browse - transparent.gif" alt="Co-browse"></a></li>
       </ul>
     </nav>
 
-<body>
     <img src="pic4.PNG" alt="Displayed Image">
 
 <script>
 window.CoBrowsingCustomStrings = {
-  "popup-title": "Totally247 Co Browse",
+  "popup-title": "Zest 4's Co-browsing",
   "popup-close": "X",
   "popup-start-information": "Please Click Start to initialize the Co-browsing session and pass the session ID below to the Agent.",
   "popup-sync-information": "You may have open another page that is currently being synchronized. Click Synchronize to synchronize this page instead.",
