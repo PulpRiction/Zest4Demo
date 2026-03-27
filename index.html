@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Zest 4's 8x8 Demo</title>  <!-- Web Page Tab Name. -->
+		<title>Acorn Motor Group's 8x8 Demo</title>  <!-- Web Page Tab Name. -->
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<style>
         body {
@@ -10,32 +10,34 @@
         }
     	</style>
 	</head>
-
-
-    <nav>
-      <ul id="navbar" style="list-style: none; text-align: right;">
-        <li><div id="__8x8-chat-button-container-script_3253393646628f7ebcb9cc8.09307088"></div></li> <!-- chat button id. -->
-	<li style="float:left"><a href="https://pulpriction.github.io/Zest4Demo/co-browse/"><img src="toplhlogo.png"></a></li> <!-- the top left hand logo and makes the logo a button to go to the cobrowse page. -->
-			
-      </ul>
-    </nav>
-  
-
 <body>
 
-    <!-- This script will not interfere with the button layout, you just need to include it in the same page. It must also be within the <body> section of the page, preferably just before the ending tag. -->
+    <nav>
+      <ul id="navbar">
+        <li class="logo-item"><a href="https://zestsupport.github.io/8x8chatdesign/co-browse/"><img src="toplhlogo.PNG" alt="Top left logo"></a></li> <!-- the top left hand logo and makes the logo a button to go to the cobrowse page. -->
+      </ul>
+    </nav>
+
+    <div class="floating-actions">
+      <div class="chat-launcher">
+        <div id="__8x8-chat-button-container-script_400379141681b2ac61e3958.80686093"></div> <!-- chat button id. -->
+      </div>
+      <button class="open-button" onclick="openForm()">Request a Callback</button>
+    </div>
+
+      <!-- This script will not interfere with the button layout, you just need to include it in the same page. It must also be within the <body> section of the page, preferably just before the ending tag. -->
     <script type="text/javascript">
     (function(c, f, ef){
         var typeofC = Object.prototype.toString.call(c);
         var props = (typeofC === '[object Object]' && c) || {};
         var cb = f || (typeofC === '[object Function]' && c);
         var config = {
-            scriptUuid: "script_3253393646628f7ebcb9cc8.09307088",
-            tenant: "emVzdDR4MDE",
-            channelName: "Chat",
-            channelUuid: "KaH4RUi3RQCEABsoMEj2Ag",
-            domain: "https://vcc-eu10.8x8.com",
-            buttonContainerId: "__8x8-chat-button-container-script_3253393646628f7ebcb9cc8.09307088",
+            scriptUuid: "script_400379141681b2ac61e3958.80686093",
+            tenant: "ZGJmYmRlbW8wMQ",
+            channelName: "Totally247 Chat",
+            channelUuid: "1e5ugzCAQC-NGQ3FtX2F8A",
+            domain: "https://vcc-eu8.8x8.com",
+            buttonContainerId: "__8x8-chat-button-container-script_400379141681b2ac61e3958.80686093",
             align: "right",
         };
 
@@ -74,7 +76,7 @@
 	
 <script>
 window.CoBrowsingCustomStrings = {
-  "popup-title": "Zest4's Co-browsing", <!-- CoBrowse name. -->
+  "popup-title": "Zest4's Co-browsing",
   "popup-close": "X",
   "popup-start-information": "Please Click Start to initialize the Co-browsing session and pass the session ID below to the Agent.",
   "popup-sync-information": "You may have open another page that is currently being synchronized. Click Synchronize to synchronize this page instead.",
@@ -99,10 +101,8 @@ window.CoBrowsingCustomStrings = {
 <script> 
 (function(e,i,g,h,t,c,o,b){o=i.createElement(g);o.async=1;o.src=t;o.setAttribute(h,c); 
 b=i.getElementsByTagName(g)[0];b.parentNode.insertBefore(o,b); 
-})(window,document,'script','data-8x8-co-browsing','https://cb.8x8.com/license{67d9cdab4333f7004d23c32f}/dist/primary-bundle.js','67ec4a6512eb3d004d7ac8fd','data-8x8-co-browsing-mode','full-control'); 
+})(window,document,'script','data-8x8-co-browsing','https://cb.8x8.com/license{67d9cdab4333f7004d23c32f}/dist/primary-bundle.js','6824dbac53cdd2004d981e67','data-8x8-co-browsing-mode','full-control'); 
 </script> 	
-
-</body>
  
     
 <div id="welcome-section" >
@@ -136,6 +136,21 @@ body {
 }
 
 /* Button used to open the contact form - fixed at the bottom of the page */
+.floating-actions {
+  position: fixed;
+  right: 28px;
+  bottom: 23px;
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  z-index: 1100;
+}
+
+.chat-launcher,
+.chat-launcher > div {
+  display: block;
+}
+
 .open-button {
   background-color: #555;
   color: white;
@@ -143,9 +158,6 @@ body {
   border: none;
   cursor: pointer;
   opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  right: 28px;
   width: 245px;
   border-radius: 10px; /* Rounded edges */
 }
@@ -157,7 +169,7 @@ body {
   bottom: 0;
   right: 15px;
   border: 3px solid #f1f1f1;
-  z-index: 9;
+  z-index: 1200;
   background-color: white;
   color: #3a3a38;
   border-radius: 15px; /* Rounded edges for popup */
@@ -222,23 +234,16 @@ table, td, th {
   color: #3a3a38;
 }
 </style>
-</head>
-
-	
-	
-<body>
-
-<button class="open-button" onclick="openForm()">Request a Callback</button>
 
 <div class="form-popup" id="myForm">
-  <form name="WebCallBack" action="https://vcc-eu10.8x8.com/SC/webcallback.php" method="get"  
-        oninput="extTransactionData.value = '[Name|' + fname.value +' '+ lname.value + '][Location|' + location.value + '][Reason|' + reason.value +']'">
+  <form id="WebCallBack" onsubmit="submitWebCallback(event)" oninput="extTransactionData.value = '[Name|' + fname.value +' '+ lname.value + '][Location|' + location.value + '][Reason|' + reason.value +']'">
+
     <input type="hidden" name="extTransactionData"/>
-    <input type="hidden" name="tenant" value="zest4x01"/>  <!-- Tenant Name. -->
-    <input type="hidden" name="token" value="6c593095111b09d2ecf1510d32ebf9bddfd48c77be1afb85ce6dc8313719ba1c"/>  <!-- Action Tokes. -->
-    <input type="hidden" name="channel_number" value="441604263652"/> <!-- Channel Number. -->
+    <input type="hidden" name="tenant" value="dbfbdemo01"/>  <!-- Tenant Name. -->
+    <input type="hidden" name="token" value="28072c1255afe841a5d62d7bdd68197fb00fe73766abb16ce0205c4a430515a1"/>  <!-- Action Tokes. -->
+    <input type="hidden" name="channel_number" value="442033072344"/> <!-- Channel Number. -->
     <input type="hidden" name="callback_type" value="1"/>
-    <input type="hidden" name="queue_id" value="121"/> <!-- Queue ID. -->
+    <input type="hidden" name="queue_id" value="167"/> <!-- Queue ID. -->
     <input type="hidden" name="expiration" value="1200"/><br/>
     <table style="background-color:#FFFFFF;">
       <tr><td>First name:</td><td> <input type="text" name="fname"/></td></tr>
@@ -263,6 +268,31 @@ table, td, th {
 </div>
 
 <script>
+function submitWebCallback(event) {
+  event.preventDefault();
+
+  const form = document.getElementById("WebCallBack");
+  const formData = new FormData(form);
+  const params = new URLSearchParams(formData).toString();
+
+  fetch("https://vcc-eu8.8x8.com/SC/webcallback.php?" + params)
+    .then(response => {
+      if (response.ok) {
+        console.log("Callback request submitted successfully.");
+        closeForm(); // or show a hidden success message instead
+      } else {
+        console.warn("8x8 callback request failed with status:", response.status);
+        // optionally show a message on the page
+      }
+    })
+    .catch(error => {
+      console.error("Request failed:", error);
+    });
+}
+</script>
+
+
+<script>
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
@@ -273,4 +303,5 @@ function closeForm() {
 </script>
 
 	
+</body>
 </html>
