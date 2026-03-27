@@ -1,5 +1,6 @@
 
 html,
+body,
 nav {
   background-color: #FFFFFF;
 }
@@ -7,6 +8,7 @@ body {
   font-family: 'comfortaa', sans-serif;
   background-color: #FFFFFF;
   text-align: right;
+  margin: 0;
 }
 
 * {
@@ -16,8 +18,19 @@ body {
 
 /* Nav bar */
 
- nav ul {
+ nav {
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+ nav ul {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  list-style: none;
   text-align: right;
   width: 100%;
   background-color: #FFFFFF;
@@ -27,8 +40,17 @@ body {
 }
 
 nav ul li {
-  display: inline-block;
-  margin: 30px; 
+  display: block;
+  margin: 0;
+}
+
+nav ul .logo-item a,
+nav ul .logo-item img {
+  display: block;
+}
+
+nav ul .chat-item {
+  margin-left: auto;
 }
 
 nav ul li a {
@@ -42,12 +64,18 @@ nav ul li a:hover {
 /* about me */
 
 #welcome-section {
-  top: 20;
-  line-height: 1.6;
   background: #FFFFFF;
-  min-height: 55vh;
-  padding-top: 45vh;
-  text-align:
+}
+
+#welcome-section2 {
+  background: #FFFFFF;
+}
+
+#welcome-section img,
+#welcome-section2 img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
   
 
@@ -104,6 +132,4 @@ body.popup .window {
 body.popup .window-header {
     background-color: #e87415;
 }
-
-
 
